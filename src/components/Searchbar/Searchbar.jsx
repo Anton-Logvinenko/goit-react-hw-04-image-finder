@@ -3,7 +3,7 @@ import css from './Searchbar.module.css';
 import { VscSearch } from 'react-icons/vsc';
 import { useState } from 'react';
 
-// const { Component } = require('react');
+
 
 function Searchbar({ onSearch }) {
   const [imgName, setImgName] = useState('');
