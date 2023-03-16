@@ -9,7 +9,6 @@ function Searchbar({ onSearch }) {
   const [imgName, setImgName] = useState('');
 
   const handelChange = e => setImgName(e.currentTarget.value) ;
-  console.log(imgName)
 
   const handelSubmit = e => {
     e.preventDefault();

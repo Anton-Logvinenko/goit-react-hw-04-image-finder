@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { toast } from 'react-hot-toast';
 
-import { getImgApi } from '../services/imgAPI';
+import { getImgApi } from '../../services/imgAPI';
 import { ImageGalleryItem } from '../ImageGalleryItem/ImageGalleryItem';
 
 // import { ThreeDots } from 'react-loader-spinner';
@@ -30,7 +30,6 @@ function ImageGallery({ imgSearch }) {
     setLoading(true);
     getImgApi(imgSearch, page)
       .then(dataImg => {
-        console.log(dataImg.hits);
         if (dataImg.totalHits > 0) {
           setTotalHits(dataImg.totalHits);
           setData(prev => [...prev, ...dataImg.hits]);
